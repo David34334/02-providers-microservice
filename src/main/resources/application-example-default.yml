@@ -1,0 +1,25 @@
+#Port
+server:
+  port: 8100
+
+#DB Connection
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:[YOUR_PORT]/[YOUR_DATABASE_NAME]"
+    username: "[YOUR_DATABASE_USERNAME]"
+    password: "[YOUR_DATABASE_PASSWORD]"
+
+  #JPA Configuration
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: "org.hibernate.dialect.[YOUR_DATABASE_DRIVER]"
+        format_sql: true
+
+#Time Zone
+timezone:
+  date:
+    bogota: "America/Bogota"
